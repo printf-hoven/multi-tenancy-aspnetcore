@@ -20,8 +20,8 @@ Add-Migration Initial_Create -context PatientContext
 
 You can make changes to the models from time to time, and run these commands to set migrations
 ```
-Add-Migration [any-name-here] -context DoctorContext
-Add-Migration [any-name-here] -context PatientContext
+Add-Migration [name-here] -context DoctorContext
+Add-Migration [name-here] -context PatientContext
 ```
 
-The C# code will automatically apply the first migration when the app is run the next time, and the second will be applied to the database of each doctor whenever the respective doctor logs in the next time.
+The C# code will automatically apply the first migration when the app is run the next time; the second will be applied to the database of each doctor whenever the respective doctor logs in the next time.
