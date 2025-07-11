@@ -1,6 +1,15 @@
 # multi-tenancy-aspnetcore
 Multi-Tenancy in ASPNET Core - a simpler approach, without the need for any un-necessary nuget packages.
 
+## Quick Info
+
+We suggest you clone the project and run it first. It will compile and run immediately. The following points will be easier to understand after that.
+
+1. Database for the patients of every doctor is different. The location is inside a folder called "DataOf_{doctorId}". We have used `HttpContext.User.Identity.Name` as the unique doctorId. This can be easily guessed by outsiders, but you can wire a small function to translate each doctorId to something else, if required.
+2. Migrations and database creation occurs in the Index.cshtml.cs file of the folder Areas/Members/Pages. This is the page where the doctor logs into his home page.
+3. Connection String switching occurs in the PatientContext.cs file. 
+4. The login of the doctor occurs through Login.cshtml.cs. We have not handled the ReturnUrl, the doctor is always taken to Areas/Members/Pages/Index.cshtml. You can do this on your own, it's not difficult. The VERY FIRST login of a doctor MUST take him to Areas/Members/Pages/Index.cshtml, so that databases get created. That's why we have not done anything with ReturnUrl - the purpose being to ensure your experience is smooth.
+
 ## See the Blog Page for details
 
 See the blog page for details
@@ -14,7 +23,7 @@ Install-Package Microsoft.EntityFrameworkCore.Sqlite
 Install-Package Microsoft.EntityFrameworkCore.Tools
 ```
 
-## Migrations
+## Past and Future Migrations
 Following have <ins>already been added</ins>
 ```
 Add-Migration Initial_Create -context DoctorContext
