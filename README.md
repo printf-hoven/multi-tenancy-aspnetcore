@@ -1,7 +1,7 @@
 # multi-tenancy-aspnetcore
 Multi-Tenancy in ASPNET Core - a simpler approach, without the need for any un-necessary nuget packages.
 
-## see the Blog Page for details
+## See the Blog Page for details
 
 See the blog page for details
 [The Problem of Multi-tenancy in ASP.NET Core and a Suggested Solution](https://hoven.in/aspnet-core/multitenancy-problem-and-solutions.html)
@@ -28,3 +28,8 @@ Add-Migration [name-here] -context PatientContext
 ```
 
 The C# code will automatically apply the first migration when the app is run the next time; the second will be applied to the database of each doctor whenever the respective doctor logs in the next time.
+
+## See the Blog Page for details
+
+See the blog page for details
+[The Problem of Multi-tenancy in ASP.NET Core and a Suggested Solution](https://hoven.in/aspnet-core/multitenancy-problem-and-solutions.html)
