@@ -1,0 +1,48 @@
+﻿@page
+
+@model LoginModel
+
+<div class="w-75 mx-auto">
+
+  <form method="post">
+
+    <div class="mb-3">
+
+      @if (string.IsNullOrEmpty(Model.Phone))
+      {
+        <p>Please enter your phone to get OTP for login.</p>
+
+        <label asp-for="Phone" class="col-form-label"></label>
+
+        <input asp-for="Phone" class="form-control" />
+      }
+      else
+      {
+        <input type="hidden" asp-for="Phone" class="form-control" />
+      }
+
+    </div>
+
+    @if (string.IsNullOrEmpty(Model.Phone))
+    {
+      <button type="submit" class="btn btn-primary">Get OTP</button>
+    }
+    else
+    {
+      <div class="mb-3">
+
+        <p>Please authenticate with the OTP [during testing: 1234] sent to @Model.Phone</p>
+
+        <label asp-for="OTP" class="form-label"></label>
+
+        <input asp-for="OTP" class="form-control" />
+
+      </div>
+
+      <button type="submit" class="btn btn-primary">Enter OTP</button>
+
+      <a asp-page="Index" class="btn btn-primary">Cancel</a>
+    }
+
+  </form>
+</div>

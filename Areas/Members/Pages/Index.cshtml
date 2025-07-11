@@ -1,0 +1,15 @@
+﻿@page
+
+@inject IHttpContextAccessor _httpContext
+
+@using MultiTenancy.Models
+
+@model IndexModel
+
+<p>Welcome Member @User.Identity?.Name</p>
+
+<p>
+  DebugMessage: Your patient data is stored under your own folder
+  "@PatientContext.GetDoctorSpecificDatabaseFolder(_httpContext)"
+</p>
+
