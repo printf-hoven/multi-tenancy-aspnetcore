@@ -5,7 +5,7 @@ Multi-Tenancy in ASPNET Core - a simpler approach, without the need for any un-n
 
 We suggest you clone the project and run it first. It will compile and run immediately. The following points will be easier to understand after that.
 
-1. Database for the patients of every doctor will be separate. It gets created automatically when a new doctor gets added. The location is inside a folder called "DataOf_{doctorId}". We have used `HttpContext.User.Identity.Name` as the unique doctorId. This can be easily guessed by outsiders, but you can wire a small function to translate each doctorId to something else, if required.
+1. Database for the patients of every doctor is separate. It gets created automatically when a new doctor gets added to your website. The location is inside a folder called "DataOf_{doctorId}". We have used `HttpContext.User.Identity.Name` as the unique doctorId. This can be easily guessed by outsiders, but you can wire a small function to translate each doctorId to something else, if required.
 2. Patients database gets created automatically, and gets updated and migrated automatically. HUMAN INTERVENTION IS NEVER REQUIRED. We have left a comment [see the function "EnsureDatabaseMigrationAndExistense()"] where you can even add your own code to take automated backups. 
 3. Migrations and database creation occurs in the Index.cshtml.cs file of the folder Areas/Members/Pages. This is the page where the doctor logs into his home page.
 4. Connection String switching occurs in the PatientContext.cs file. 
