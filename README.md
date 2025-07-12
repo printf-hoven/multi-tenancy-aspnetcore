@@ -11,6 +11,9 @@ We suggest you clone the project and run it first. It will compile and run immed
 4. Connection String switching occurs in the PatientContext.cs file. 
 5. The login of the doctor occurs through Login.cshtml.cs. We have not handled the ReturnUrl, the doctor is always taken to Areas/Members/Pages/Index.cshtml. You can do this on your own, it's not difficult. The VERY FIRST login of a doctor MUST take him to Areas/Members/Pages/Index.cshtml, so that databases get created. That's why we have not done anything with ReturnUrl - the purpose being to ensure your experience is smooth.
 
+## Video Explanation
+[![Multi-tenancy](https://img.youtube.com/vi/2i_m4QlZ3cI/0.jpg)](https://www.youtube.com/watch?v=2i_m4QlZ3cI)
+
 ## See the Blog Page for details
 
 See the blog page for details
