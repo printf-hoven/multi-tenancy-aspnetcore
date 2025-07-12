@@ -13,6 +13,7 @@ We suggest you clone the project and run it first. It will compile and run immed
 
 ## Video Explanation
 Following is the video explanation of the source code. Click below to open youtube video.
+
 [![Multi-tenancy](https://img.youtube.com/vi/2i_m4QlZ3cI/0.jpg)](https://www.youtube.com/watch?v=2i_m4QlZ3cI)
 
 ## See the Blog Page for details
